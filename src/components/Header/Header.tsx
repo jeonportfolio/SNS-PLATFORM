@@ -10,9 +10,9 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { IconName } from '../Icons';
 
 type CompoundComposition = {
-    Title?:React.FC<{title:string}>;
-    Icon?:React.FC<{onPress:()=>void; iconName:IconName}>
-    Group?:React.FC<{children:ReactElement[]}>
+    Title:React.FC<{title:string}>;
+    Icon:React.FC<{onPress:()=>void; iconName:IconName}>
+    Group:React.FC<{children:ReactElement[]}>
 }
 
 
