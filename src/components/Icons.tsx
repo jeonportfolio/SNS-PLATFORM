@@ -1,31 +1,27 @@
-import React from "react";
-import {Ionicons} from '@expo/vector-icons'
-
-// export class Icon extends React.Component {
+import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
+// export class Icon extends React.Component{
 //     render(){
-//         return(
-//             <Ionicons 
+//         return (
+//             <Ionicons
 //                 name={this.props.name}
 //                 size={this.props.size}
 //                 color={this.props.color}
-//             />
+//                 />
 //         )
 //     }
 // }
 
-export type IconName = keyof typeof Ionicons.glyphMap;
+export type TypeIconName = keyof typeof Ionicons.glyphMap;
 
 export const Icon:React.FC<{
-    name:IconName;
+    name:TypeIconName
     size:number;
     color:string;
-
-}> = (props) => {
-    return(
-        <Ionicons 
-            name={props.name}
-            size={props.size}
-            color={props.color}
-        />
-    )
-}
+}> = (props) => (
+  <Ionicons
+    name={props.name}
+    size={props.size}
+    color={props.color}
+  />
+);

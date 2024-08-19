@@ -3,7 +3,7 @@ import React from "react";
 import { BottomTabNavigation } from "./BottomTabNavigation";
 import { AddFeedScreen } from "../screens/AddFeedScreens";
 import { FeedListScreen } from "../screens/FeedListScreen";
-import { useNavigation } from "@react-navigation/native";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 
 export type RootStackParamList = {
     BottomTab : undefined,
@@ -37,5 +37,10 @@ export const RootStackNavigation:React.FC = () => {
 }
 
 export const useRootNavigation = <RouteName extends keyof RootStackParamList>() => {
-    return useNavigation<NativeStackNavigationProp<RootStackParamList, RouteName>>
+    return useNavigation<NativeStackNavigationProp<RootStackParamList, RouteName>>()
 }
+
+    export const useRootRoute = <RouteName extends keyof RootStackParamList>()=>{
+
+        return useRoute<RouteProp<RootStackParamList, RouteName>>();
+    }
